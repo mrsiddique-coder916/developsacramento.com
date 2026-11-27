@@ -286,3 +286,51 @@ p { margin: 0 0 1em; max-width: 68ch; }
   html { scroll-behavior: auto; }
   .capitol .cap-outline { animation: none; stroke-dashoffset: 0; }
 }
+
+/* Selling for 1%: hero points, fee comparison, calculator, Joyst cards */
+.hero-eyebrow { font-family: var(--body); font-weight: 600; font-size: .8125rem; letter-spacing: .18em; text-transform: uppercase; margin: 0 0 10px; }
+.hero-points { list-style: none; margin: 0 0 24px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 18px; color: #dfe6ed; font-size: .9375rem; }
+.hero-points li { padding-left: 18px; position: relative; }
+.hero-points li::before { content: ""; position: absolute; left: 0; top: .55em; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
+.nav-portal { border: 1px solid rgba(255,255,255,.35); border-radius: 6px; padding: 6px 12px !important; }
+.fee-compare { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr); gap: 32px; align-items: start; }
+.fee-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.fee-table caption { caption-side: bottom; text-align: left; font-size: .875rem; color: #a9b8c6; padding-top: 12px; }
+.fee-table th, .fee-table td { padding: 14px 12px; text-align: right; border-bottom: 1px solid rgba(255,255,255,.18); }
+.fee-table thead th { font-size: .8125rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #c3cfda; vertical-align: bottom; }
+.fee-table tbody th { text-align: left; font-family: var(--display); font-weight: 800; font-size: 1.5rem; color: #fff; }
+.fee-table .fee-mine { color: var(--gold); font-weight: 600; background: rgba(217,178,95,.08); }
+.fee-table thead .fee-mine { color: var(--gold); }
+.fee-calc { background: #fff; color: var(--text); border-radius: 8px; padding: 24px; border-top: 4px solid var(--gold); }
+.fee-calc h3 { margin: 0 0 14px; color: var(--ink); }
+.section-dark .fee-calc .btn-gold { color: var(--ink); }
+.section-dark .fee-calc .btn-gold:hover { background: var(--ink); color: #fff; }
+.section-head > div > .eyebrow { margin-bottom: 6px; }
+.section-head > div > h2 { max-width: 16ch; }
+.fee-calc label { display: block; font-size: .875rem; font-weight: 600; color: var(--muted); margin-bottom: 6px; }
+.fee-input { display: flex; align-items: center; border: 1px solid var(--rule); border-radius: 6px; padding: 0 12px; background: var(--stone); }
+.fee-input span { color: var(--muted); font-weight: 600; }
+.fee-input input { flex: 1; min-width: 0; border: 0; background: transparent; padding: 12px 8px; font: inherit; font-size: 1.25rem; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+.fee-input input:focus { outline: 0; }
+.fee-input:focus-within { border-color: var(--sky); box-shadow: 0 0 0 3px rgba(31,95,168,.2); }
+.fee-out { margin: 18px 0 20px; padding: 0; }
+.fee-out div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.fee-out dt { font-size: .9375rem; color: var(--muted); }
+.fee-out dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+.fee-out .fee-keep { border-bottom: 0; padding-top: 14px; }
+.fee-out .fee-keep dt { color: var(--ink); font-weight: 600; }
+.fee-out .fee-keep dd { font-family: var(--display); font-weight: 800; font-size: 1.6rem; color: var(--gold-deep); }
+.reasons-light li { border-top-color: var(--rule); }
+.reasons-light h3 { color: var(--ink); }
+.reasons-light p { color: var(--muted); }
+.joyst-grid .card .btn { margin-top: 14px; }
+@media (max-width: 900px) {
+  .fee-compare { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  /* A phone shows the fee that matters and what it saves; the 2.5% and 3% fees are in the calculator. */
+  .fee-table .fee-other { display: none; }
+  .fee-table th, .fee-table td { padding: 12px 6px; font-size: .9375rem; }
+  .fee-table tbody th { font-size: 1.25rem; }
+  .fee-table thead th { font-size: .6875rem; letter-spacing: .04em; }
+}
